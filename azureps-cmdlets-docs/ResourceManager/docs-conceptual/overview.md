@@ -9,15 +9,14 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
-ms.date: 05/15/2017
-ms.openlocfilehash: dbcc818ecc06d3206b8ccd6f8743c670c86cead0
-ms.sourcegitcommit: 5f2c794bfa44ec4ffacdd73f548288874210a498
+ms.date: 07/26/2017
+ms.openlocfilehash: 3772b68949dc9dba110e6015c8d2a8b944b26528
+ms.sourcegitcommit: 20bcef86db4e4869125bb63085fcffd009c19280
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2017
+ms.lasthandoff: 07/27/2017
 ---
-# Panoramica di Azure PowerShell
-<a id="overview-of-azure-powershell" class="xliff"></a>
+# <a name="overview-of-azure-powershell"></a>Panoramica di Azure PowerShell
 
 Azure PowerShell offre un set di cmdlet che usano il modello [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) per la gestione delle risorse di Azure.
 
@@ -34,17 +33,15 @@ Gli esempi seguenti aiutano a eseguire scenari comuni con Azure PowerShell:
 > [!NOTE] > In presenza di distribuzioni che usano il modello di distribuzione classico non convertibili, è possibile installare la versione di Gestione dei servizi di Azure PowerShell. Per altre informazioni, vedere [Install the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps) (Installare il modulo Gestione dei servizi di Azure PowerShell).
 
 
-### Richiesta di assistenza con PowerShell
-<a id="need-help-with-powershell" class="xliff"></a>
+### <a name="need-help-with-powershell"></a>Richiesta di assistenza con PowerShell
 
 Se non si ha familiarità con PowerShell, un'introduzione a PowerShell può risultare utile. Per un'introduzione a PowerShell, vedere [Scripting with PowerShell](https://technet.microsoft.com/library/bb978526.aspx) (Scripting con PowerShell).
 
 È inoltre possibile guardare questo video: [PowerShell Basics: (Part 1) Getting Started with PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1) (Nozioni di base su PowerShell: Introduzione a PowerShell, parte 1).
 
-## Altri moduli di Azure PowerShell
-<a id="other-azure-powershell-modules" class="xliff"></a>
+## <a name="other-azure-powershell-modules"></a>Altri moduli di Azure PowerShell
 
 * [Azure Active Directory](/powershell/azure/active-directory/)
 * [Azure Information Protection](/powershell/azure/aip/)
-* [Azure Service Fabric](/powershell/azure/oservice-fabric/)
+* [Azure Service Fabric](/powershell/azure/service-fabric/)
 * [Azure ElasticDB](/powershell/azure/elasticdbjobs/)
