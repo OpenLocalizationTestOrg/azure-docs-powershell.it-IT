@@ -16,14 +16,12 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/29/2017
 ---
-# Introduzione ad Azure PowerShell
-<a id="getting-started-with-azure-powershell" class="xliff"></a>
+# <a name="getting-started-with-azure-powershell"></a>Introduzione ad Azure PowerShell
 
 Azure PowerShell è progettato per la gestione e l'amministrazione delle risorse di Azure dalla riga di comando e per la creazione di script di automazione che funzionano con Azure Resource Manager. Questo articolo consente di iniziare a usarlo e illustra i concetti di base.
 
 
-## Installare Azure PowerShell
-<a id="install-azure-powershell" class="xliff"></a>
+## <a name="install-azure-powershell"></a>Installare Azure PowerShell
 Verificare di aver installato l'ultima versione di Azure PowerShell.  La versione più recente è la 4.1.0.
 
 1. [Installare Azure PowerShell](install-azurerm-ps.md).
@@ -31,8 +29,7 @@ Verificare di aver installato l'ultima versione di Azure PowerShell.  La version
 2. Per verificare che l'installazione sia riuscita, eseguire `Get-Module AzureRM` dalla riga di comando.
 
 
-## Accedere ad Azure
-<a id="log-in-to-azure" class="xliff"></a>
+## <a name="log-in-to-azure"></a>Accedere ad Azure
 
 Accedere in modo interattivo:
 
@@ -43,8 +40,7 @@ Accedere in modo interattivo:
 
 Dopo aver effettuato l'accesso a un account Azure, è possibile usare i cmdlet di Azure PowerShell per l'accesso e la gestione delle risorse nella sottoscrizione.
 
-## Creare un gruppo di risorse
-<a id="create-a-resource-group" class="xliff"></a>
+## <a name="create-a-resource-group"></a>Creare un gruppo di risorse
 
 Quando è tutto pronto, si usa Azure PowerShell per creare risorse in Azure.
 
@@ -64,13 +60,11 @@ Tags              :
 ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/myResourceGroup
 ```
 
-## Creare una macchina virtuale Windows
-<a id="create-a-windows-virtual-machine" class="xliff"></a>
+## <a name="create-a-windows-virtual-machine"></a>Creare una macchina virtuale Windows
 
 Dopo aver creato il gruppo di risorse, si crea una macchina virtuale Windows al suo interno. Per creare una nuova macchina virtuale occorre prima creare le altre risorse necessarie e assegnarle a una configurazione. Sarà quindi possibile usare tale configurazione per creare la macchina virtuale.
 
-### Creare le risorse di rete necessarie
-<a id="create-the-required-network-resources" class="xliff"></a>
+### <a name="create-the-required-network-resources"></a>Creare le risorse di rete necessarie
 
 È prima necessario creare una configurazione di subnet da usare con il processo di creazione della rete virtuale. Si crea anche un indirizzo IP pubblico in modo che sia possibile connettersi a questa macchina virtuale. Si crea quindi un gruppo di sicurezza di rete per proteggere l'accesso all'indirizzo pubblico. Infine si crea la scheda di interfaccia di rete virtuale usando tutte le risorse precedenti.
 
@@ -106,8 +100,7 @@ $nic = New-AzureRmNetworkInterface -Name myNic1 -ResourceGroupName $resourceGrou
   -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $publicIp.Id -NetworkSecurityGroupId $nsg.Id
 ```
 
-### Creare la macchina virtuale
-<a id="create-the-virtual-machine" class="xliff"></a>
+### <a name="create-the-virtual-machine"></a>Creare la macchina virtuale
 
 Innanzitutto è necessario un insieme di credenziali per il sistema operativo.
 
@@ -158,13 +151,11 @@ mstsc /v:xx.xxx.xx.xxx
 Fornire la stessa combinazione di nome utente/password usata quando si crea la macchina virtuale per l'accesso.
 
 
-## Creare una macchina virtuale Linux
-<a id="create-a-linux-virtual-machine" class="xliff"></a>
+## <a name="create-a-linux-virtual-machine"></a>Creare una macchina virtuale Linux
 
 Per creare una nuova macchina virtuale occorre prima creare le altre risorse necessarie e assegnarle a una configurazione. Sarà quindi possibile usare tale configurazione per creare la macchina virtuale. Ciò presuppone che il gruppo di risorse sia già stato creato come indicato in precedenza. Sarà inoltre necessario disporre di una chiave pubblica SSH denominata `id_rsa.pub` nella directory .ssh del profilo utente.
 
-### Creare le risorse di rete necessarie
-<a id="create-the-required-network-resources" class="xliff"></a>
+### <a name="create-the-required-network-resources"></a>Creare le risorse di rete necessarie
 
 È prima necessario creare una configurazione di subnet da usare con il processo di creazione della rete virtuale. Si crea anche un indirizzo IP pubblico in modo che sia possibile connettersi a questa macchina virtuale. Si crea quindi un gruppo di sicurezza di rete per proteggere l'accesso all'indirizzo pubblico. Infine si crea la scheda di interfaccia di rete virtuale usando tutte le risorse precedenti.
 
@@ -204,8 +195,7 @@ $nic = New-AzureRmNetworkInterface -Name myNic2 -ResourceGroupName $resourceGrou
   -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $publicIp.Id -NetworkSecurityGroupId $nsg.Id
 ```
 
-### Creare la macchina virtuale
-<a id="create-the-virtual-machine" class="xliff"></a>
+### <a name="create-the-virtual-machine"></a>Creare la macchina virtuale
 
 Ora che si dispone delle risorse necessarie, è possibile creare la macchina virtuale. Per questo passaggio, si crea un oggetto di configurazione della macchina virtuale, quindi si usa la configurazione per creare la macchina virtuale.
 
@@ -261,8 +251,7 @@ applicable law.
 my-login@MyLinuxVM:~$
 ```
 
-## Creazione di altre risorse in Azure
-<a id="creating-other-resources-in-azure" class="xliff"></a>
+## <a name="creating-other-resources-in-azure"></a>Creazione di altre risorse in Azure
 
 È stato descritto come creare un gruppo di risorse, una macchina virtuale Linux e una macchina virtuale di Windows Server. È possibile creare molti altri tipi di risorse di Azure.
 
@@ -293,8 +282,7 @@ New-AzureRmWebApp -Name MyWebApp43432 -AppServicePlan MyAppServicePlan -Resource
 New-AzureRmWebApp -Name MyWebApp43433 -AppServicePlan MyAppServicePlan -ResourceGroupName myResourceGroup -Location westeurope
 ```
 
-## Elenco delle risorse distribuite
-<a id="listing-deployed-resources" class="xliff"></a>
+## <a name="listing-deployed-resources"></a>Elenco delle risorse distribuite
 
 È possibile usare il cmdlet `Get-AzureRmResource` per elencare le risorse in esecuzione in Azure. L'esempio seguente illustra le risorse appena create nel nuovo gruppo di risorse.
 
@@ -323,8 +311,7 @@ MYvNET2                                               westeurope Microsoft.Netwo
 micromyresomywi032907510                              westeurope Microsoft.Storage/storageAccounts
 ```
 
-## Eliminazione di risorse
-<a id="deleting-resources" class="xliff"></a>
+## <a name="deleting-resources"></a>Eliminazione di risorse
 
 Per eseguire la pulizia dell'account Azure, si dovranno rimuovere le risorse create in questo esempio. Per eliminare le risorse non più necessarie, si può usare il cmdlet `Remove-AzureRm*`. Per rimuovere la macchina virtuale Windows creata, usare il comando seguente:
 
@@ -354,13 +341,11 @@ Are you sure you want to remove resource group 'myResourceGroup'
 
 Questa operazione può richiedere alcuni minuti.
 
-## Ottenere gli esempi
-<a id="get-samples" class="xliff"></a>
+## <a name="get-samples"></a>Ottenere gli esempi
 
 Per altre informazioni sull'uso di Azure PowerShell, vedere i nostri script più comuni per le [macchine virtuali Linux](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), le [macchine virtuali di Windows](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), le [app Web](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json) e i [database SQL](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json).
 
-## Passaggi successivi
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Passaggi successivi
 
 * [Accedere ad Azure PowerShell](authenticate-azureps.md)
 * [Gestire le sottoscrizioni di Azure con Azure PowerShell](manage-subscriptions-azureps.md)
