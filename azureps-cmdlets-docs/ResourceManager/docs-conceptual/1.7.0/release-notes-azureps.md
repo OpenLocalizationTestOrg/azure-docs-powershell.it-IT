@@ -17,13 +17,11 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="3c90e-103">Note sulla versione</span><span class="sxs-lookup"><span data-stu-id="3c90e-103">Release notes</span></span>
-<a id="release-notes" class="xliff"></a>
+# <a name="release-notes"></a><span data-ttu-id="3c90e-103">Note sulla versione</span><span class="sxs-lookup"><span data-stu-id="3c90e-103">Release notes</span></span>
 
 <span data-ttu-id="3c90e-104">Questo è un elenco delle modifiche apportate ad Azure PowerShell in questa versione.</span><span class="sxs-lookup"><span data-stu-id="3c90e-104">This is a list of changes made to Azure PowerShell in this release.</span></span>
 
-## <span data-ttu-id="3c90e-105">Versione 1.7.0</span><span class="sxs-lookup"><span data-stu-id="3c90e-105">Version 1.7.0</span></span>
-<a id="version-170" class="xliff"></a>
+## <a name="version-170"></a><span data-ttu-id="3c90e-105">Versione 1.7.0</span><span class="sxs-lookup"><span data-stu-id="3c90e-105">Version 1.7.0</span></span>
 
 * <span data-ttu-id="3c90e-106">**Modifica comportamentale per i parametri -Force, -Confirm e $ConfirmPreference per tutti i cmdlet. Questa implementazione è in fase di modifica per allinearla alle linee guida di PowerShell. Per la maggior parte dei cmdlet, questo significa rimuovere il parametro Force e per ignorare la richiesta ShouldProcess, gli utenti dovranno includere il parametro‘-Confirm:$false’ negli script di PowerShell.**</span><span class="sxs-lookup"><span data-stu-id="3c90e-106">**Behavioral change for -Force, –Confirm and $ConfirmPreference parameters for all cmdlets. We are changing this implementation to be in line with PowerShell guidelines. For most cmdlets, this means removing the Force parameter and to skip the ShouldProcess prompt, users will need to include the parameter: ‘-Confirm:$false’ in their PowerShell scripts.**</span></span> <span data-ttu-id="3c90e-107">Queste modifiche permettono di risolvere i problemi seguenti:</span><span class="sxs-lookup"><span data-stu-id="3c90e-107">This changes are addressing following issues:</span></span>
   - <span data-ttu-id="3c90e-108">Implementazione corretta della funzionalità -WhatIf, per permettere a un utente di determinare gli effetti di un cmdlet o uno script senza apportare alcuna modifica effettiva</span><span class="sxs-lookup"><span data-stu-id="3c90e-108">Correct implementation of –WhatIf functionality, allowing a user to determine the effects of a cmdlet or script without making any actual changes</span></span>

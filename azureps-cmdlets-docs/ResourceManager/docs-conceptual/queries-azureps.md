@@ -1,6 +1,6 @@
 ---
-title: <span data-ttu-id="ef370-101">Query per le risorse di Azure e formattazione dei risultati | Microsoft Docs</span><span class="sxs-lookup"><span data-stu-id="ef370-101">Querying for Azure resources and formatting results | Microsoft Docs</span></span>
-description: <span data-ttu-id="ef370-102">Come eseguire una query delle risorse in Azure e formattare i risultati.</span><span class="sxs-lookup"><span data-stu-id="ef370-102">How to query for resources in Azure and format the results.</span></span>
+title: Query per le risorse di Azure e formattazione dei risultati | Microsoft Docs
+description: Come eseguire una query delle risorse in Azure e formattare i risultati.
 services: azure
 author: sdwheeler
 ms.author: sewhee
@@ -16,14 +16,12 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="ef370-103">Query per le risorse di Azure</span><span class="sxs-lookup"><span data-stu-id="ef370-103">Querying for Azure resources</span></span>
-<a id="querying-for-azure-resources" class="xliff"></a>
+# <a name="querying-for-azure-resources"></a><span data-ttu-id="ef370-103">Query per le risorse di Azure</span><span class="sxs-lookup"><span data-stu-id="ef370-103">Querying for Azure resources</span></span>
 
 <span data-ttu-id="ef370-104">Usando i cmdlet incorporati è possibile eseguire una query in PowerShell.</span><span class="sxs-lookup"><span data-stu-id="ef370-104">Querying in PowerShell can be completed by using built-in cmdlets.</span></span> <span data-ttu-id="ef370-105">In PowerShell, i nomi dei cmdlet assumono la forma di **_verbo-sostantivo_**.</span><span class="sxs-lookup"><span data-stu-id="ef370-105">In PowerShell, cmdlet names take the form of **_Verb-Noun_**.</span></span> <span data-ttu-id="ef370-106">I cmdlet che usano il verbo **_Get_**(ottenere) sono cmdlet di query.</span><span class="sxs-lookup"><span data-stu-id="ef370-106">The cmdlets using the verb **_Get_** are the query cmdlets.</span></span> <span data-ttu-id="ef370-107">I sostantivi dei cmdlet sono i tipi di risorse di Azure che vengono ignorati per i verbi di cmdlet.</span><span class="sxs-lookup"><span data-stu-id="ef370-107">The cmdlet nouns are the types of Azure resources that are acted upon by the cmdlet verbs.</span></span>
 
 
-## <span data-ttu-id="ef370-108">Selezione di proprietà semplici</span><span class="sxs-lookup"><span data-stu-id="ef370-108">Selecting simple properties</span></span>
-<a id="selecting-simple-properties" class="xliff"></a>
+## <a name="selecting-simple-properties"></a><span data-ttu-id="ef370-108">Selezione di proprietà semplici</span><span class="sxs-lookup"><span data-stu-id="ef370-108">Selecting simple properties</span></span>
 
 <span data-ttu-id="ef370-109">Azure PowerShell include la formattazione predefinita definita per ciascun cmdlet.</span><span class="sxs-lookup"><span data-stu-id="ef370-109">Azure PowerShell has default formatting defined for each cmdlet.</span></span> <span data-ttu-id="ef370-110">Le proprietà più comuni per ogni tipo di risorsa vengono visualizzate automaticamente in formato di tabella o elenco.</span><span class="sxs-lookup"><span data-stu-id="ef370-110">The most common properties for each resource type are displayed in a table or list format automatically.</span></span> <span data-ttu-id="ef370-111">Per altre informazioni sulla formattazione dell'output, vedere [Formattazione dei risultati delle query](formatting-output.md).</span><span class="sxs-lookup"><span data-stu-id="ef370-111">For more information about formatting output, see [Formatting query results](formatting-output.md).</span></span>
 
@@ -55,8 +53,7 @@ MyUnbuntu1610 MYWESTEURG        westeurope
 MyWin2016VM   MYWESTEURG        westeurope
 ```
 
-## <span data-ttu-id="ef370-115">Selezione di proprietà nidificate complesse</span><span class="sxs-lookup"><span data-stu-id="ef370-115">Selecting complex nested properties</span></span>
-<a id="selecting-complex-nested-properties" class="xliff"></a>
+## <a name="selecting-complex-nested-properties"></a><span data-ttu-id="ef370-115">Selezione di proprietà nidificate complesse</span><span class="sxs-lookup"><span data-stu-id="ef370-115">Selecting complex nested properties</span></span>
 
 <span data-ttu-id="ef370-116">Se la proprietà che si desidera selezionare è annidata nell'output JSON sarà necessario fornire il percorso completo di tale proprietà annidata.</span><span class="sxs-lookup"><span data-stu-id="ef370-116">If the property you want to select is nested deep in the JSON output you need to supply the full path to that nested property.</span></span> <span data-ttu-id="ef370-117">L'esempio seguente illustra come selezionare il nome della macchina virtuale e il tipo di sistema operativo dal cmdlet `Get-AzureRmVM`.</span><span class="sxs-lookup"><span data-stu-id="ef370-117">The following example shows how to select the VM Name and the OS type from the `Get-AzureRmVM` cmdlet.</span></span>
 
@@ -71,8 +68,7 @@ MyUnbuntu1610   Linux
 MyWin2016VM   Windows
 ```
 
-## <span data-ttu-id="ef370-118">Filtrare i risultati usando il cmdlet Where-Object</span><span class="sxs-lookup"><span data-stu-id="ef370-118">Filter result using the Where-Object cmdlet</span></span>
-<a id="filter-result-using-the-where-object-cmdlet" class="xliff"></a>
+## <a name="filter-result-using-the-where-object-cmdlet"></a><span data-ttu-id="ef370-118">Filtrare i risultati usando il cmdlet Where-Object</span><span class="sxs-lookup"><span data-stu-id="ef370-118">Filter result using the Where-Object cmdlet</span></span>
 
 <span data-ttu-id="ef370-119">Il cmdlet `Where-Object` consente di filtrare i risultati in base a qualsiasi valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="ef370-119">The `Where-Object` cmdlet allows you to filter the result based on any property value.</span></span> <span data-ttu-id="ef370-120">Nell'esempio seguente, il filtro consente di selezionare solo le macchine virtuali con il testo "RGD" nel nome.</span><span class="sxs-lookup"><span data-stu-id="ef370-120">In the following example, the filter selects only VMs that have the text "RGD" in their name.</span></span>
 

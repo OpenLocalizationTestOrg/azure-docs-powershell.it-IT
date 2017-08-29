@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="eb38b-104">Gestire più sottoscrizioni di Azure</span><span class="sxs-lookup"><span data-stu-id="eb38b-104">Manage multiple Azure subscriptions</span></span>
-<a id="manage-multiple-azure-subscriptions" class="xliff"></a>
+# <a name="manage-multiple-azure-subscriptions"></a><span data-ttu-id="eb38b-104">Gestire più sottoscrizioni di Azure</span><span class="sxs-lookup"><span data-stu-id="eb38b-104">Manage multiple Azure subscriptions</span></span>
 
 <span data-ttu-id="eb38b-105">Se si usa Azure da poco, probabilmente si avrà una singola sottoscrizione.</span><span class="sxs-lookup"><span data-stu-id="eb38b-105">If you are brand new to Azure, you probably only have a single subscription.</span></span> <span data-ttu-id="eb38b-106">Tuttavia, se si usa Azure già da tempo, probabilmente si saranno create più sottoscrizioni di Azure.</span><span class="sxs-lookup"><span data-stu-id="eb38b-106">But if you have been using Azure for a while, you may have created multiple Azure subscriptions.</span></span> <span data-ttu-id="eb38b-107">È possibile configurare Azure PowerShell per eseguire comandi su una determinata sottoscrizione.</span><span class="sxs-lookup"><span data-stu-id="eb38b-107">You can configure Azure PowerShell to execute commands against a particular subscription.</span></span>
 
