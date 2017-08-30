@@ -10,11 +10,11 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
 ms.date: 07/26/2017
-ms.openlocfilehash: 3772b68949dc9dba110e6015c8d2a8b944b26528
-ms.sourcegitcommit: 20bcef86db4e4869125bb63085fcffd009c19280
+ms.openlocfilehash: 02bfc15fec83ed4078d9a054b450c5a3cd66b8e2
+ms.sourcegitcommit: db5c50de90764a9bdc7c1f1dbca3aed5bfeb05fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 08/22/2017
 ---
 # <a name="overview-of-azure-powershell"></a>Panoramica di Azure PowerShell
 
@@ -29,13 +29,14 @@ Gli esempi seguenti aiutano a eseguire scenari comuni con Azure PowerShell:
 * [App Web](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 * [Database SQL](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
-
 > [!NOTE] > In presenza di distribuzioni che usano il modello di distribuzione classico non convertibili, è possibile installare la versione di Gestione dei servizi di Azure PowerShell. Per altre informazioni, vedere [Install the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps) (Installare il modulo Gestione dei servizi di Azure PowerShell).
-
 
 ### <a name="need-help-with-powershell"></a>Richiesta di assistenza con PowerShell
 
-Se non si ha familiarità con PowerShell, un'introduzione a PowerShell può risultare utile. Per un'introduzione a PowerShell, vedere [Scripting with PowerShell](https://technet.microsoft.com/library/bb978526.aspx) (Scripting con PowerShell).
+Se non si ha familiarità con PowerShell, un'introduzione a PowerShell può risultare utile.
+
+* [Installazione di PowerShell](/powershell/scripting/installing-windows-powershell)
+* [Creazione di script con PowerShell](/powershell/scripting/scripting-with-windows-powershell)
 
 È inoltre possibile guardare questo video: [PowerShell Basics: (Part 1) Getting Started with PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1) (Nozioni di base su PowerShell: Introduzione a PowerShell, parte 1).
 
