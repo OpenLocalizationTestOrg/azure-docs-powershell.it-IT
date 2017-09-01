@@ -182,6 +182,7 @@
                 "version": "azuresmps-4.0.0",
                 "dest": "azure/servicemanagement"
             },
+
             {
                 "files": [
                     "toc.yml"
@@ -362,7 +363,7 @@
             }
         },
         "globalMetadata": {
-            "showPowerShellPicker": "true",
+            "apiPlatform": "powershell",
             "brand": "azure",
             "searchScope": [
                 "Azure"
