@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: f6d249ca5bb09c4fe8445ba5b339ffa6012815ed
-ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
+ms.openlocfilehash: 1af5aeffb8e87e916df3e2440a84805935136c0f
+ms.sourcegitcommit: e6b7e20bbd04eda51416c56b13f867102b602d1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 10/07/2017
 ---
 # <a name="log-in-with-azure-powershell"></a>Accedere ad Azure PowerShell
 
@@ -52,6 +52,12 @@ Le entità servizio consentono di creare account non interattivi da usare per la
     SubscriptionName      : My Production Subscription
     CurrentStorageAccount :
     ```
+
+### <a name="log-in-using-an-azure-vm-managed-service-identity"></a>Accedere tramite un'Identità del servizio gestito della macchina virtuale di Azure
+
+Identità del servizio gestito è una funzionalità in anteprima di Azure Active Directory. È possibile usare un'entità servizio di Identità del servizio gestito per eseguire l'accesso e acquisire un token di accesso solo app per accedere ad altre risorse.
+
+Per altre informazioni su Identità del servizio gestito, vedere [How to use an Azure VM Managed Service Identity (MSI) for sign-in and token acquisition](/azure/active-directory/msi-how-to-get-access-token-using-msi) (Come usare un'Identità del servizio gestito della macchina virtuale di Azure per l'accesso e l'acquisizione di token).
 
 ## <a name="log-in-to-another-cloud"></a>Accedere a un altro cloud
 
