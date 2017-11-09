@@ -9,14 +9,17 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/17/2017
-ms.openlocfilehash: 0c1500a8748a3aa4546c6ce1e8d16a635b056edb
+ms.date: 08/31/2017
+ms.openlocfilehash: 0e560332c87fdcc8b7365f2271de24481003a4d6
 ms.sourcegitcommit: b256bf48e15ee98865de0fae50e7b81878b03a54
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/03/2017
 ---
 # <a name="install-and-configure-azure-powershell"></a>Installare e configurare Azure PowerShell
+
+Questo articolo illustra i passaggi per installare i moduli di Azure PowerShell in ambiente Windows.
+Se si intende usa Azure PowerShell in ambiente macOS o Linux, vedere l'articolo seguente: [Installare e configurare Azure PowerShell in macOS e Linux](install-azurermps-maclinux.md).
 
 L'installazione di Azure PowerShell da PowerShell Gallery è il metodo preferito di installazione.
 
@@ -30,7 +33,7 @@ Get-Module PowerShellGet -list | Select-Object Name,Version,Path
 
 Verrà visualizzata una schermata simile all'output seguente:
 
-```
+```Output
 Name          Version Path
 ----          ------- ----
 PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
@@ -39,7 +42,7 @@ PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1
 Se PowerShellGet non è installato, vedere la sezione [Come ottenere PowerShellGet](#how-to-get-powershellget) di questo articolo.
 
 > [!NOTE]
-> L'uso di PowerShellGet richiede criteri di esecuzione che consentono di eseguire script. Per altre informazioni sui criteri di esecuzione di PowerShell, vedere [About Execution Policies](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_execution_policies) (Informazioni sui criteri di esecuzione).
+> L'uso di PowerShellGet richiede criteri di esecuzione che consentono di eseguire script. Per altre informazioni sui criteri di esecuzione di PowerShell, vedere [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies) (Informazioni sui criteri di esecuzione).
 
 ## <a name="step-2-install-azure-powershell"></a>Passaggio 2: Installare Azure PowerShell
 
@@ -47,12 +50,12 @@ L'installazione di Azure PowerShell da PowerShell Gallery richiede privilegi ele
 
 ```powershell
 # Install the Azure Resource Manager modules from the PowerShell Gallery
-Install-Module AzureRM
+Install-Module AzureRM -AllowClobber
 ```
 
 Per impostazione predefinita, PowerShell Gallery non è configurata come archivio attendibile per PowerShellGet. La prima volta che si usa PSGallery verrà visualizzato il messaggio seguente:
 
-```
+```Output
 Untrusted repository
 
 You are installing the modules from an untrusted repository. If you trust this repository, change
@@ -84,6 +87,10 @@ Per altre informazioni sull'uso di Azure PowerShell, vedere gli articoli seguent
 
 * [Guida introduttiva ad Azure PowerShell](get-started-azureps.md)
 
+## <a name="reporting-issues-and-feedback"></a>Segnalazione di problemi e suggerimenti
+
+Se si rilevano bug con lo strumento, segnalare un problema nella sezione [Issues](https://github.com/Azure/azure-powershell/issues) (Problemi) del repository GitHub. Per inserire commenti e suggerimenti dalla riga di comando, usare il cmdlet `Send-Feedback`.
+
 ## <a name="frequently-asked-questions"></a>Domande frequenti
 
 ### <a name="how-to-get-powershellget"></a>Come ottenere PowerShellGet
@@ -97,7 +104,7 @@ Per altre informazioni sull'uso di Azure PowerShell, vedere gli articoli seguent
 <a id="helpmechoose"></a>
 ### <a name="checking-the-version-of-azure-powershell"></a>Controllo della versione di Azure PowerShell
 
-Anche se si consiglia di eseguire l'aggiornamento alla versione più recente il prima possibile, alcune versioni di Azure PowerShell sono di supporto. Per determinare la versione di Azure PowerShell installata, eseguire `Get-Module AzureRM` dalla riga di comando.
+Anche se si consiglia di eseguire l'aggiornamento alla versione più recente il prima possibile, alcune versioni di Azure PowerShell sono supportate. Per determinare la versione di Azure PowerShell installata, eseguire `Get-Module AzureRM` dalla riga di comando.
 
 ```powershell
 Get-Module AzureRM -list | Select-Object Name,Version,Path
@@ -111,7 +118,7 @@ In presenza di distribuzioni che usano il modello di distribuzione classico, è 
 
 Se è installata una versione precedente di Azure PowerShell che include il modulo Gestione dei servizi, è probabile che venga visualizzato l'errore seguente:
 
-```
+```Output
 PackageManagement\Install-Package : A command with name 'Get-AzureStorageContainerAcl' is already
 available on this system. This module 'Azure.Storage' may override the existing commands. If you
 still want to install this module 'Azure.Storage', use -AllowClobber parameter.
