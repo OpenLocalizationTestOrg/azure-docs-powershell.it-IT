@@ -9,12 +9,12 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 11/15/2017
-ms.openlocfilehash: fbd5309167be8cb32aecbfb4661a1789c37d8f2d
-ms.sourcegitcommit: 7a1c08518b180de822c915db99b055b93a1459d7
+ms.date: 08/31/2017
+ms.openlocfilehash: 2cd3fc8e955ae826471dceee79d5e6b70070d416
+ms.sourcegitcommit: e6b7e20bbd04eda51416c56b13f867102b602d1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 10/07/2017
 ---
 # <a name="getting-started-with-azure-powershell"></a>Introduzione ad Azure PowerShell
 
@@ -26,15 +26,15 @@ Il modo più semplice per iniziare è [avviare Cloud Shell](/azure/cloud-shell/q
 
 1. Avviare Cloud Shell dal riquadro di spostamento in alto nel portale di Azure.
 
-   ![Icona di Shell](/media/get-started-azureps/shell-icon.png)
+   ![Icona di Shell](~/media/get-started-azureps/shell-icon.png)
 
 2. Scegliere la sottoscrizione da usare e creare un account di archiviazione.
 
-   ![Creare un account di archiviazione](/media/get-started-azureps/storage-prompt.png)
+   ![Creare un account di archiviazione](~/media/get-started-azureps/storage-prompt.png)
 
 Dopo aver creato lo spazio di archiviazione, Cloud Shell aprirà una sessione di PowerShell nel browser.
 
-![Cloud Shell per PowerShell](/media/get-started-azureps/cloud-powershell.png)
+![Cloud Shell per PowerShell](~/media/get-started-azureps/cloud-powershell.png)
 
 È anche possibile installare Azure PowerShell e usarlo in locale in una sessione di PowerShell.
 
@@ -44,7 +44,7 @@ Verificare di aver installato l'ultima versione di Azure PowerShell. Per informa
 
 1. [Installare Azure PowerShell](install-azurerm-ps.md).
 
-2. Per verificare che l'installazione sia riuscita, eseguire `Get-Module AzureRM -ListAvailable` dalla riga di comando.
+2. Per verificare che l'installazione sia riuscita, eseguire `Get-Module AzureRM` dalla riga di comando.
 
 ## <a name="log-in-to-azure"></a>Accedere ad Azure
 
