@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/06/2017
-ms.openlocfilehash: 94b39c18acaca7a4b17b5207feed025442665acc
-ms.sourcegitcommit: c42c7176276ec4e1cc3360a93e6b15d32083bf9f
+ms.openlocfilehash: 2357bb5d71c221a782a297c41e7a6d08cd3f2952
+ms.sourcegitcommit: 4ebdeea3c472d94c1aedb10b9d85bf2e76826e83
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="install-and-configure-azure-powershell-on-macos-and-linux"></a>Installare e configurare Azure PowerShell in macOS e Linux
 
@@ -55,6 +55,7 @@ Dopo aver installato il modulo, è necessario caricarlo nella sessione di PowerS
 
 ```powershell
 Import-Module AzureRM.Netcore
+Import-Module AzureRM.Profile.Netcore
 ```
 
 Al termine dell'importazione, è possibile testare il modulo appena installato eseguendo un tentativo di accesso ad Azure con il comando seguente:
@@ -69,7 +70,7 @@ Il comando riportato sopra richiede di passare a `https://aka.ms/devicelogin` e 
 
 I moduli di Azure PowerShell per .NET Standard sono ancora in fase di sviluppo. Questi moduli non offrono il set completo di cmdlet disponibili per la versione Windows dei moduli. Le funzioni seguenti sono implementate nei moduli AzureRM.Netcore:
 
-* Account Management
+* Gestione account
   - Accesso con account Microsoft, account dell'organizzazione o entità servizio tramite Microsoft Azure Active Directory
   - Salvataggio delle credenziali su disco con Save-AzureRmContext e caricamento delle credenziali salvate con Import-AzureRmContext
 * Environment
