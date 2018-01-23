@@ -8,14 +8,14 @@
           href: install-azurermps-maclinux.md
         - name: Altri metodi di installazione
           href: other-install.md
-    - name: Introduzione
+    - name: Attività iniziali
       href: get-started-azureps.md
     - name: Cloud Shell
       href: 'https://docs.microsoft.com/azure/cloud-shell/overview'
     - name: Accesso
       href: authenticate-azureps.md
       items:
-        - name: Creare un’entità servizio
+        - name: Creare un'entità servizio
           href: create-azure-service-principal-azureps.md
         - name: Uso di credenziali persistenti
           href: context-persistence.md
@@ -39,6 +39,9 @@
           href: using-experimental-modules.md
     - name: Note sulla versione
       href: release-notes-azureps.md
+      items:
+        - name: Modifiche di rilievo in Azure PowerShell 4.x
+          href: migration-guide.4.0.0.md
 - name: Script di esempio
   items:
     - name: Macchine virtuali Linux
