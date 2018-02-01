@@ -12,10 +12,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
 ms.openlocfilehash: 6eda2d2a729331b212938aa2681d0188a25b734a
-ms.sourcegitcommit: c42c7176276ec4e1cc3360a93e6b15d32083bf9f
+ms.sourcegitcommit: 72f56597f0329d35779a3ea4ccea6293f0fd2502
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Creare un'entità servizio di Azure con Azure PowerShell
 
@@ -26,7 +26,7 @@ Se si prevede di gestire un'app o un servizio con Azure PowerShell, è consiglia
 
 ## <a name="what-is-a-service-principal"></a>Che cos'è un'"entità servizio"?
 
-Un'entità servizio di Azure è un'identità di sicurezza usata da app, servizi e strumenti di automazione creati dall'utente per accedere a risorse di Azure specifiche. Può essere considerata come una "identità utente" (nome utente e password o certificato) con un ruolo specifico e autorizzazioni attentamente controllate. A differenza di un'identità utente generica, deve essere in grado di eseguire soltanto operazioni specifiche. Se le viene concesso solo il livello minimo di autorizzazioni necessarie per eseguire le attività di gestione, un'entità servizio migliora la sicurezza.
+Un'entità servizio di Azure è un'identità di sicurezza usata da app, servizi e strumenti di automazione creati dall'utente per accedere a risorse di Azure specifiche. Può essere considerata come una "identità utente" (nome utente e password o certificato) con un ruolo specifico e autorizzazioni attentamente controllate. A differenza di un'identità utente generica, essa deve essere in grado di eseguire soltanto operazioni specifiche. Se le viene concesso solo il livello minimo di autorizzazioni necessarie per eseguire le attività di gestione, un'entità servizio migliora la sicurezza.
 
 ## <a name="verify-your-own-permission-level"></a>Verificare il proprio livello di autorizzazione
 
@@ -112,7 +112,7 @@ SubscriptionName      :
 CurrentStorageAccount :
 ```
 
-Congratulazioni. È possibile usare queste credenziali per eseguire l'app. Sarà poi necessario modificare le autorizzazioni dell'entità servizio.
+Congratulazioni! È possibile usare queste credenziali per eseguire l'app. Sarà poi necessario modificare le autorizzazioni dell'entità servizio.
 
 ## <a name="managing-roles"></a>Gestione dei ruoli
 

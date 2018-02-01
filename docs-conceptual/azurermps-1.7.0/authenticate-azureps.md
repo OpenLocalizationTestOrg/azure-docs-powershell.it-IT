@@ -11,10 +11,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
 ms.openlocfilehash: 1af5aeffb8e87e916df3e2440a84805935136c0f
-ms.sourcegitcommit: c42c7176276ec4e1cc3360a93e6b15d32083bf9f
+ms.sourcegitcommit: 72f56597f0329d35779a3ea4ccea6293f0fd2502
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="log-in-with-azure-powershell"></a>Accedere ad Azure PowerShell
 
@@ -28,7 +28,7 @@ Azure PowerShell supporta più metodi di accesso. Il modo più semplice per iniz
 
 ## <a name="log-in-with-a-service-principal"></a>Accesso con un'entità servizio
 
-Le entità servizio consentono di creare account non interattivi da usare per la modifica delle risorse. Le entità servizio sono simili ad account utente a cui è possibile applicare delle regole mediante Azure Active Directory. Concedendo le autorizzazioni minime necessarie a un'entità servizio, è possibile garantire una sicurezza ancora maggiore agli script di automazione.
+Le entità servizio consentono di creare account non interattivi da usare per la modifica delle risorse. Le entità servizio sono analoghe agli account utente a cui è possibile applicare delle regole mediante Azure Active Directory. Concedendo le autorizzazioni minime necessarie a un'entità servizio, è possibile garantire una sicurezza ancora maggiore agli script di automazione.
 
 1. Se non si dispone già di un'entità servizio, [crearne una](create-azure-service-principal-azureps.md).
 
