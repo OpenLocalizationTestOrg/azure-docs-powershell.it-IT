@@ -14,10 +14,10 @@ metadata:
   ms.devlang: azure-powershell
   ms.technology: azure
   ms.openlocfilehash: bb5024927da7888dca406a522fa39dfe225afb89
-  ms.sourcegitcommit: 3842efd1eb2d16f7c6d9ae87d6d7916b770658c1
+  ms.sourcegitcommit: 20af779cd523c758d40e23d60eb989a4ef982d5c
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 03/05/2018
+  ms.lasthandoff: 03/15/2018
 items:
 - durationInMinutes: 1
   content: "In questa esercitazione si apprenderanno tutti i passaggi necessari per la configurazione di una macchina virtuale con Azure PowerShell. L'esercitazione illustra anche le query di output, il riutilizzo delle risorse di Azure e la pulizia delle risorse.\n\nQuesta esercitazione può essere completata con l'esperienza interattiva disponibile tramite Azure Cloud Shell oppure è possibile [installare Azure PowerShell](install-azurerm-ps.md) in locale.\n\nUsare __CTRL+MAIUSC+V__ (__CMD+MAIUSC+V__ in macOS) per incollare il testo dell'esercitazione in Azure Cloud Shell."
