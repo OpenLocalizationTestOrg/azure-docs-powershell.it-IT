@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: 1af5aeffb8e87e916df3e2440a84805935136c0f
-ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
+ms.openlocfilehash: f07dee0eed106e39879d58ae06ff08b787faa531
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="log-in-with-azure-powershell"></a>Accedere ad Azure PowerShell
 
@@ -22,7 +22,7 @@ Azure PowerShell supporta più metodi di accesso. Il modo più semplice per iniz
 
 ## <a name="interactive-log-in"></a>Accesso interattivo
 
-1. Digitare `Login-AzureRmAccount`. Apparirà una finestra di dialogo che richiede le credenziali di Azure.
+1. Digitare `Connect-AzureRmAccount`. Apparirà una finestra di dialogo che richiede le credenziali di Azure.
 
 2. Digitare l'indirizzo di posta elettronica e la password associati all'account. Le informazioni delle credenziali vengono autenticate e salvate in Azure, quindi la finestra viene chiusa.
 
@@ -35,7 +35,7 @@ Le entità servizio consentono di creare account non interattivi da usare per la
 2. Accedere con l'entità servizio.
 
     ```powershell
-    Login-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
+    Connect-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
     ```
 
     Per ottenere il TenantId, accedere in modo interattivo e quindi recuperare il TenantId dalla sottoscrizione.
@@ -64,7 +64,7 @@ Per altre informazioni su Identità del servizio gestito, vedere [How to use an 
 I servizi cloud di Azure offrono più ambienti conformi alle norme in materia di gestione dei dati vigenti in diversi paesi. Se l'account di Azure si trova in un cloud governativo è necessario specificare l'ambiente quando si accede. Ad esempio, se l'account si trova nel cloud della Cina, accedere usando il comando seguente:
 
 ```powershell
-Login-AzureRmAccount -EnvironmentName AzureChinaCloud
+Connect-AzureRmAccount -Environment AzureChinaCloud
 ```
 
 Usare il comando seguente per visualizzare un elenco degli ambienti disponibili:
