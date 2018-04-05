@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 01/12/2018
-ms.openlocfilehash: 64a86dfd4af7f3f0a91501e9a096ff190f7100cb
-ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
+ms.openlocfilehash: eed7a35fcf20a17c83d9e5e3272be4b77fa12c34
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="install-and-configure-azure-powershell-on-macos-and-linux"></a>Installare e configurare Azure PowerShell in macOS e Linux
 
@@ -59,7 +59,7 @@ Import-Module AzureRM.Profile.Netcore
 Al termine dell'importazione, è possibile testare il modulo appena installato eseguendo un tentativo di accesso ad Azure con il comando seguente:
 
 ```powershell
-Login-AzureRMAccount
+Connect-AzureRmAccount
 ```
 
 Il comando riportato sopra richiede di passare a `https://aka.ms/devicelogin` e immettere il codice fornito.

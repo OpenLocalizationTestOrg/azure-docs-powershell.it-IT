@@ -9,12 +9,12 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/17/2017
-ms.openlocfilehash: 0c1500a8748a3aa4546c6ce1e8d16a635b056edb
-ms.sourcegitcommit: b256bf48e15ee98865de0fae50e7b81878b03a54
+ms.date: 03/27/2018
+ms.openlocfilehash: 993c9570b7fe81e5be68b8d82943f2135aed2337
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="install-and-configure-azure-powershell"></a>Installare e configurare Azure PowerShell
 
@@ -25,21 +25,30 @@ L'installazione di Azure PowerShell da PowerShell Gallery è il metodo preferito
 L'installazione degli elementi da PowerShell Gallery richiede il modulo PowerShellGet. Assicurarsi di avere la versione appropriata di PowerShellGet e di soddisfare gli altri requisiti di sistema. Eseguire il comando seguente per determinare se PowerShellGet è installato nel sistema.
 
 ```powershell
-Get-Module PowerShellGet -list | Select-Object Name,Version,Path
+Get-Module -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
 Verrà visualizzata una schermata simile all'output seguente:
 
-```
+```Output
 Name          Version Path
 ----          ------- ----
+Name          Version Path
+----          ------- ----
+PowerShellGet 1.6.0   C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.6.0\PowerShellGet.psd1
 PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
+```
+
+È necessario PowerShellGet versione 1.1.2.0 o successiva. Per aggiornare PowerShellGet, usare il comando seguente:
+
+```powershell
+Install-Module PowerShellGet -Force
 ```
 
 Se PowerShellGet non è installato, vedere la sezione [Come ottenere PowerShellGet](#how-to-get-powershellget) di questo articolo.
 
 > [!NOTE]
-> L'uso di PowerShellGet richiede criteri di esecuzione che consentono di eseguire script. Per altre informazioni sui criteri di esecuzione di PowerShell, vedere [About Execution Policies](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_execution_policies) (Informazioni sui criteri di esecuzione).
+> L'uso di PowerShellGet richiede criteri di esecuzione che consentono di eseguire script. Per altre informazioni sui criteri di esecuzione di PowerShell, vedere [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies) (Informazioni sui criteri di esecuzione).
 
 ## <a name="step-2-install-azure-powershell"></a>Passaggio 2: Installare Azure PowerShell
 
@@ -47,12 +56,12 @@ L'installazione di Azure PowerShell da PowerShell Gallery richiede privilegi ele
 
 ```powershell
 # Install the Azure Resource Manager modules from the PowerShell Gallery
-Install-Module AzureRM
+Install-Module -Name AzureRM -AllowClobber
 ```
 
 Per impostazione predefinita, PowerShell Gallery non è configurata come archivio attendibile per PowerShellGet. La prima volta che si usa PSGallery verrà visualizzato il messaggio seguente:
 
-```
+```Output
 Untrusted repository
 
 You are installing the modules from an untrusted repository. If you trust this repository, change
@@ -75,7 +84,7 @@ Se è installata una versione precedente di Azure PowerShell è probabile che ve
 Dopo aver installato il modulo, è necessario caricarlo nella sessione di PowerShell. Eseguire questa operazione in una normale sessione di PowerShell, senza privilegi elevati. I moduli vengono caricati usando il cmdlet `Import-Module`, come indicato di seguito:
 
 ```powershell
-Import-Module AzureRM
+Import-Module -Name AzureRM
 ```
 
 ## <a name="next-steps"></a>Passaggi successivi
@@ -97,10 +106,10 @@ Per altre informazioni sull'uso di Azure PowerShell, vedere gli articoli seguent
 <a id="helpmechoose"></a>
 ### <a name="checking-the-version-of-azure-powershell"></a>Controllo della versione di Azure PowerShell
 
-Anche se si consiglia di eseguire l'aggiornamento alla versione più recente il prima possibile, alcune versioni di Azure PowerShell sono di supporto. Per determinare la versione di Azure PowerShell installata, eseguire `Get-Module AzureRM` dalla riga di comando.
+Anche se si consiglia di eseguire l'aggiornamento alla versione più recente il prima possibile, alcune versioni di Azure PowerShell sono supportate. Per determinare la versione di Azure PowerShell installata, eseguire `Get-Module AzureRM` dalla riga di comando.
 
 ```powershell
-Get-Module AzureRM -list | Select-Object Name,Version,Path
+Get-Module AzureRM -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
 ### <a name="support-for-classic-deployment-methods"></a>Supporto per i metodi di distribuzione classica
@@ -111,7 +120,7 @@ In presenza di distribuzioni che usano il modello di distribuzione classico, è 
 
 Se è installata una versione precedente di Azure PowerShell che include il modulo Gestione dei servizi, è probabile che venga visualizzato l'errore seguente:
 
-```
+```Output
 PackageManagement\Install-Package : A command with name 'Get-AzureStorageContainerAcl' is already
 available on this system. This module 'Azure.Storage' may override the existing commands. If you
 still want to install this module 'Azure.Storage', use -AllowClobber parameter.
@@ -127,7 +136,7 @@ Come indicato nel messaggio di errore, è necessario usare il parametro -AllowCl
 
 ```powershell
 # Install the Azure Resource Manager modules from the PowerShell Gallery
-Install-Module AzureRM -AllowClobber
+Install-Module -Name AzureRM -AllowClobber
 ```
 
 Per altre informazioni, vedere l'argomento relativo alla guida per [Install-Module](https://msdn.microsoft.com/powershell/reference/5.1/PowerShellGet/install-module).
@@ -144,7 +153,7 @@ Install-Module -Name AzureRM -RequiredVersion 1.2.9
 Solo una versione del modulo può essere caricata in una sessione di PowerShell. È necessario aprire una nuova finestra di PowerShell e usare `Import-Module` per importare una versione specifica dei cmdlet di AzureRM:
 
 ```powershell
-Import-Module AzureRM -RequiredVersion 1.2.9
+Import-Module -Name AzureRM -RequiredVersion 1.2.9
 ```
 
 > [!NOTE]

@@ -9,18 +9,17 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/31/2017
-ms.openlocfilehash: 1a1a2e3d69252c8461284e6ec8e26fa838e773f7
-ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
+ms.date: 03/27/2018
+ms.openlocfilehash: a10cb9496ff6822c6f4c10ab336dd21c85084da8
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="install-and-configure-azure-powershell"></a>Installare e configurare Azure PowerShell
 
-Questo articolo illustra i passaggi per installare i moduli di Azure PowerShell in ambiente Windows.  
-Se si vuole usare Azure PowerShell su macOS o Linux, vedere gli articoli seguenti:  
-[Installare e configurare Azure PowerShell in macOS e Linux](install-azurermps-maclinux.md).
+Questo articolo illustra i passaggi per installare i moduli di Azure PowerShell in ambiente Windows.
+Se si intende usa Azure PowerShell in ambiente macOS o Linux, vedere l'articolo seguente: [Installare e configurare Azure PowerShell in macOS e Linux](install-azurermps-maclinux.md).
 
 L'installazione di Azure PowerShell da PowerShell Gallery è il metodo preferito di installazione.
 
@@ -37,9 +36,14 @@ Verrà visualizzata una schermata simile all'output seguente:
 ```Output
 Name          Version Path
 ----          ------- ----
+Name          Version Path
+----          ------- ----
+PowerShellGet 1.6.0   C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.6.0\PowerShellGet.psd1
 PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
 ```
-È anche possibile che si voglia aggiornare PowerShellGet con il comando seguente:
+
+È necessario PowerShellGet versione 1.1.2.0 o successiva. Per aggiornare PowerShellGet, usare il comando seguente:
+
 ```powershell
 Install-Module PowerShellGet -Force
 ```
